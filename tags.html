@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+    <title>Tags HTML</title>
+    <link rel="stylesheet" href="tags_style.css">
+</head>
+<body>
+    <nav class="topbar">
+        <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="tags.html" class="selected_tb">Tags HTML</a></li>
+            <li><a href="props.html">Propriedades CSS</a></li>
+            <li onclick="clique()"><a href="#">Comandos JS<img src="imgs/loading.gif" alt=""></a></li>
+            <li><a href="miniprojetos.html">Mini-Projetos</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div id="side_menu">
+            <ol>
+                <li><a href="#estrutura">Estrutura</a></li>
+                <li><a href="#texto_conteudo">Texto e Conteúdo</a></li>
+                <li><a href="#listas">Listas</a></li>
+                <li><a href="#midias">Mídias e Elementos</a></li>
+                <li><a href="#semantica">Semântica</a></li>
+                <li><a href="#botoes">Botões e Formulários</a></li>
+            </ol>
+        </div> 
+        <div class="main">
+            <h1>Tags HTML</h1><hr>
+            <p>As tags HTML são os blocos fundamentais da construção de páginas na web. Elas servem como marcadores que indicam ao navegador como os conteúdos de um site são organizados, exibidos, interpretados etc. Cada tag possui uma função específica, desde estruturar o documento até inserir imagens. Elas são escritas dentro de colchetes angulares (&lt &gt), e na maior parte do tempo vêm em pares (embora algumas só necessitem de um par de colchetes, como você verá a seguir): uma de abertura (&lt&gt) e outra de fechamento (&lt/&gt). Abaixo, as tags mais fundamentais estão listadas e separadas de acordo com o propósito delas.</p>
+            <h2 id="estrutura">Estrutura</h2><hr class="title_hr">
+            <p>Elas determinam como a página é organizada internamente, separando informações de configuração (no cabeçalho) do conteúdo visível (no corpo). Com essas tags, é possível indicar o início e o fim do documento, definir metadados importantes e estruturar o espaço onde o conteúdo será exibido para o usuário.</p>
+            <ul>
+                <li><b>&lt;!DOCTYPE html&gt;</b> - Declara o tipo de documento (HTML5), é a primeira linha do arquivo html. Vale notar que editores como o VSCode tem atalhos (no caso do VSCode, ! e enter) para automaticamente criar o esqueleto do documento HTML.</li>
+                <li><b>&lt;html&gt;&lt;/html&gt; </b>- Raíz de todo o documento HTML, contém também a linguagem da página. Assim como o !doctype, pode ser automaticamente criado por um atalho como no VSCode com ! e enter.</li>
+                <li><b>&lt;head&gt;&lt;/head&gt;</b> - Contém metadados, links e título. Aqui, o arquivo css é linkado (com &lt;link&gt;) e alguns dados são precarregados, como fontes não-nativas.</li>
+                <li><b>&lt;link&gt;</b> - Conecta o arquivo a recursos externos, como outros sites. Inclui rel="", que define o quê aquele link faz (ou com quem se relaciona na página). Alguns dos mais utilizados incluem rel="stylesheet" (para linkar um arquivo .css) e rel="shortcut icon" (para definir um favicon).</li>
+                <li><b>&lt;body&gt;&lt;/body&gt;</b> - Tudo o que é visível na página está dentro do body. Como o nome diz, é o corpo do texto, responsável por conter o conteúdo do site.</li>
+                <li><b>&lt;title&gt;&lt;/title&gt;</b> - Define o título da página na aba do navegador.</li>
+            </ul>
+            <p class="exemplo">Exemplo:<br></p>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt; &lt;!--Declara o tipo de documento.--&gt; 
+&lt;html lang="pt-br"&gt; &lt;!--Declara a linguagem da página.--&gt;  
+&lt;head&gt;&lt;/head&gt; &lt;!--Abertura da tag head, onde informações como metadados são inclusas.--&gt; 
+    &lt;meta charset="UTF-8"&gt; &lt;!--Define os caracteres suportados pelo arquivo. UTF-8 é o padrão.--&gt;  
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; &lt;!--Define a escala do site.--&gt;  
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt; &lt;!--Exemplo de uso de um &lt;link&gt;, conectando o documento com um recurso externo (nesse caso, google fonts). --&gt;  
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt; &lt;!--Função similar à linha de cima.--&gt;  
+    &lt;link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"&gt; &lt;!--Aqui, os dados da fonte Lato são obtidos e pré-carregados, para que possa ser utilizado no CSS.--&gt;  
+    &lt;title&gt;Tags HTML&lt;/title&gt; &lt;!--Define o título da página na aba do navegador.--&gt;  
+    &lt;link rel="stylesheet" href="tags_style.css"&gt; &lt;!--Conecta o arquivo HTML com o arquivo CSS.--&gt;  
+&lt;/head&gt; &lt;!--Fechamento da tag head.--&gt;  
+&lt;body&gt; &lt;!--Abertura da tag body, que contém o conteúdo do site.--&gt;  
+    &lt;h1&gt;Olá!&lt;/h1&gt; &lt;!--Um título.--&gt;  
+&lt;/body&gt; &lt;!--Fechamento da tag body.--&gt;  
+&lt;/html&gt; &lt;!--Fechamento da tag html.--&gt;
+                    </pre>
+                </code>
+            <h1 class="resultado">Olá!</h1>
+
+
+            <h2 id="texto_conteudo">Texto e Conteúdo</h2><hr class="title_hr">
+            <p>São tags responsáveis por organizar e formatar textos em uma página HTML. Com elas, é possível criar títulos, parágrafos, destaques em negrito ou itálico, quebras de linha, separadores visuais e blocos de conteúdo. São a base para exibir informações de forma clara e legível.</p>
+            <ul>
+                <li><b>&lt;h1<b>&gt;</b>&lt;/h1&gt;</b> até <b>&lt;h6&gt;</b><b>&lt;/h6&gt;</b> - Títulos de diferentes níveis, diminuindo conforme a numeração.</li>
+                <li><b>&lt;p&gt;>&lt;/p&gt;</b> - Define um parágrafo de texto.</li>
+                <li><b>&lt;b&gt;>&lt;/b&gt;</b> ou <b>&lt;strong&gt;>&lt;/strong&gt;</b> - Negrito, colocado dentro de uma tag de texto (como p).</li>
+                <li><b>&lt;em&gt;>&lt;/em&gt;</b> - Itálico, funciona da mesma forma que o negrito, dentro de uma tag de texto.</b></li>
+                <li><b>&lt;div&gt;&lt;/div&gt;</b> - Container genérico em bloco, fundamental para estruturar áreas do site. Em uma analogia, seria como uma "caixa" que armazena conteúdo.</b></li>
+                <li><b>&lt;br&gt;&lt;/br&gt;</b> - Quebra de linha. Não deve ser usado fora de tags de texto para definir espaços na página (para isso, use propriedades no CSS).</li>
+                <li><b>&lt;span&gt;&lt;/span&gt;</b> - Container genérico em bloco que nem a div, mas em linha. Pode ser usado para estilizar partes específicas com CSS com uma class ou id.</li>
+                <li><b>&lt;pre&gt;&lt;/pre&gt;</b> - Cria um texto pré-formatado  que será mostrado de forma idêntica a como está escrito no arquivo .html., incluindo seus espaçamentos, quebra de linha etc.</li>
+                <li><b>&lt;code&gt;&lt;/code&gt;</b> - Cria um texto com fonte monospace, servindo para representar um pedaço de código (os exemplos de código dessa página utilizam a tag code em conjunto com a tag pre!). Pode ser substituído por estilização em CSS.</li>
+            </ul>
+            <p class="exemplo">Exemplo:<br>
+            <code>
+                <pre>
+&lt;h1&gt;Título Principal&lt;/h1&gt;
+&lt;p&gt;Este é um &lt;strong&gt;texto em negrito&lt;/strong&gt; e &lt;em&gt;itálico&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Linha 1&lt;br&gt;Linha 2&lt;br&gt;Linha 3&lt;/p&gt; &lt;!-Parágrafo com 3 linhas.--&gt;  
+&lt;p&gt;Exemplo com &lt;span style="color:red"&gt;destaque colorido&lt;/span&gt; no meio do parágrafo.&lt;/p&gt;
+&lt;hr&gt; &lt;!--Barra divisora.--&gt;  
+&lt;div&gt; &lt;!--Abertura da tag div.--&gt;  
+    &lt;p&gt;Conteúdo dentro de uma div&lt;/p&gt;
+&lt;/div&gt; &lt;!--Fechamento da tag div.--&gt;  
+                </pre>
+            </code>
+            <div class="resultado">
+                <h1>Título Principal</h1>
+                <p>Este é um <b>texto em negrito</b> e <em>itálico</em>.</p>
+                <p>Linha 1 <br>Linha 2 <br>Linha 3</p>
+                <p>Exemplo com <span style="color:red">destaque colorido</span> no meio do parágrafo.</p>
+                <hr>
+                <div>
+                    <p>Conteúdo dentro de uma div.</p>
+                </div>
+            </div>
+
+            <h2 id="listas">Listas</h2><hr class="title_hr">
+            <p>As listas em HTML permitem organizar informações em sequência, seja com marcadores (não ordenadas), números (ordenadas) ou definições com descrições. Elas são úteis para apresentar passos, itens, conceitos ou agrupamentos de dados de forma estruturada e fácil de ler.</p>
+            <ul>
+                <li><b>&lt;ul&gt;&lt;/ul&gt;</b> - Cria uma lista não-numerada/ordenada. Alguns exemplos de uso seriam tópicos, bullet points etc.</li>
+                <li><b>&lt;ol&gt;&lt;/ol&gt;</b> - Cria uma lista ordenada/numerada. Aqui, cada item recebe uma numeração que pode ser alterada e estilizada com CSS.</li>
+                <li><b>&lt;li&gt;&lt;/li&gt;</b> - Cria um item dentro de uma lista. É usado tanto para a tag ul como para tag ol.</li>
+            </ul>
+            <code>
+                <pre>
+&lt;ul&gt;
+    &lt;li&gt;Elemento&lt;/li&gt;
+    &lt;li&gt;Elemento&lt;/li&gt;
+    &lt;li&gt;Elemento&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+    &lt;li&gt;Elemento&lt;/li&gt;
+    &lt;li&gt;Elemento&lt;/li&gt;
+    &lt;li&gt;Elemento&lt;/li&gt;
+&lt;/ol&gt;
+                </pre>
+            </code>
+            <div class="resultado_ele">
+                <ul>
+                    <li>Elemento</li>
+                    <li>Elemento</li>
+                    <li>Elemento</li>
+                </ul>
+                <ol>
+                    <li>Elemento</li>
+                    <li>Elemento</li>
+                    <li>Elemento</li>
+                </ol>
+            </div>
+
+
+            <h2 id="midias">Mídias e Elementos</h2><hr class="title_hr">
+            <p>Essa categoria inclui os elementos usados para incorporar conteúdos interativos e visuais em uma página, como imagens, vídeos, áudios, links e iframes. São recursos que enriquecem o conteúdo, tornando-o mais dinâmico, visual e acessível ao usuário.</p>
+            <ul>
+                <li><b>&lt;img&gt;</b> - Exibe uma imagem, definida com src="". Pode ser uma imagem da internet, (ex: src="https://sitemuitolegal.com/imagens/gatoengraçado.jpg") ou da própria pasta do site, linkando ao caminho da imagem nos arquivos (ex: src="imagens/bolo.jpg").</li>
+                <li><b>&lt;a&gt;&lt;/a&gt;</b> - Cria um link, definido com href="". Pode ser uma url (ex: href="https://wikipedia.org") ou uma página do próprio site (ex: href="index.html"). Além disso, o link pode ser aberto tanto na mesma guia do navegador (padrão, target="_self") ou em uma nova (target="_blank").</li>
+            </ul>
+            <code>
+                <pre>
+&lt;a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"&gt;Clique aqui!&lt;/a&gt;&lt;br&gt; &lt;!--Abre youtube.com em uma nova aba do navegador ao clicar.--&gt;
+&lt;img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2_DPW_LE1WlUuvX69bWKam1KLUHy5FruuKw&s"&gt; &lt;!--Mostra a imagem do gatinho.--&gt;
+                </pre>
+            </code>
+            <div class="resultado">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Clique aqui!</a><br> 
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2_DPW_LE1WlUuvX69bWKam1KLUHy5FruuKw&s" alt="">
+            </div>
+
+            <h2 id="semantica">Semântica</h2><hr class="title_hr">
+            <p>As tags semânticas definem a estrutura lógica e o significado das seções de uma página. Elas não alteram as propriedades do conteúdo, mas com elas, é possível organizar o conteúdo em cabeçalho, rodapé, menu de navegação, áreas principais, seções e artigos. Isso melhora a leitura tanto para usuários quanto para mecanismos de busca.</p>
+            <ul>
+                <li><b>&lt;header&gt;&lt;/header&gt;</b> - Cabeçalho da página ou seção.</li>
+                <li><b>&lt;footer&gt;&lt;/footer&gt;</b> - Rodapé, funciona de forma similar ao header.</li>
+                <li><b>&lt;main&gt;&lt;/main&gt;</b> - Conteúdo principal da página, só pode haver um por página.</li>
+                <li><b>&lt;section&gt;&lt;/section&gt;</b> - Uma seção da página.</li>
+                <li><b>&lt;article&gt;&lt;/article&gt;</b> - Uma seção "independente" da página que "faz sentido sozinha", como posts de blog.</li>
+                <li><b>&lt;nav&gt;&lt;/nav&gt;</b> - Uma área de navegação, como menus, topbars etc.</li>
+            </ul>
+            <p class="exemplo">Exemplo:<br>
+            <code><pre>
+&lt;header&gt;
+    &lt;h1&gt;Meu Site&lt;/h1&gt; &lt;!--Um Título--&gt;
+&lt;header&gt;
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Início&lt;/li&gt;
+        &lt;li&gt;Sobre&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;main&gt; &lt;!--Abertura da tag main--&gt;
+    &lt;section&gt; &lt;!--Abertura da tag de seção--&gt;
+            &lt;h2&gt;Notícias&lt;/h2&gt; &lt;!--Um subtítulo--&gt;
+
+        &lt;article&gt;
+            &lt;h3&gt;Evento importante&lt;/h3&gt;
+            &lt;p&gt;Hoje ocorreu um evento significativo.&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/section&gt; &lt;!--Fechamento da tag de seção--&gt;
+&lt;/main&gt; &lt;!--Fechamento da tag main--&gt;
+
+&lt;footer&gt; &lt;!--Abertura da tag de rodapé--&gt;
+    &lt;p&gt;© 2025 Meu Site&lt;/p&gt; &lt;!--Conteúdo do rodapé--&gt;
+&lt;/footer&gt; &lt;!--Fechamento da tag de rodapé--&gt;
+            </pre></code>
+            <div class="resultado">
+                <header><h1>Meu Site</h1></header>
+                <nav><ul>
+                    <li>Início</li>
+                    <li>Sobre</li>
+                </ul></nav>
+                <main>
+                    <section>
+                        <h2>Notícias</h2>
+                        <article>
+                            <h3>Evento Importante</h3>
+                            <p>Hoje ocorreu um evento significativo.</p>
+                        </article>
+                    </section>
+                </main>
+                <footer> 
+                    <p>© 2025 Meu Site</p>
+                </footer> 
+            </div>
+            <h2 id="botoes">Botões e Formulários</h2><hr class="title_hr">
+            <p>São tags usadas para criar áreas de interação onde o usuário pode inserir informações ou executar ações. Essas tags permitem desde a digitação de um texto simples até a seleção de opções, envio de dados e execução de comandos na página. Combinando elementos como campos de entrada, listas suspensas, áreas de texto e botões, é possível desenvolver sistemas de login, pesquisas, cadastros e qualquer recurso que dependa de dados fornecidos pelo usuário.</p>
+            <ul>
+                <li><b>&lt;button&gt;&lt;/button&gt;</b> - Cria um botão clicável, que pode levar à uma página caso uma tag a seja colocadada dentro dele (ex: &lt;button&gt;&lt;a href="..."&gt;Clique&lt;/a&gt;&lt;/button&gt;).</li>
+                <li><b>&lt;input&gt;</b>- Define um campo onde o usuário pode colocar alguma informação. Pode ser formatado com type="", com uma lista vasta de possibilidades. Desde checkbox, image, color, date, email etc. <a href="https://www.w3schools.com/tags/tag_label.asp">Clique aqui</a> para ver uma lista completa.</li>
+                <li><b>&lt;form&gt;&lt;/form&gt;</b> - Usado para uma ação do usuário, aninha outras tags dentro de si como o próprio input, textarea, label etc. Leva a informação à uma página, definida com action=""</li>
+                <li><b>&lt;textarea&gt;&lt;/textarea&gt;</b> - Usado para uma seção de texto escrito pelo usuário, que pode ser enviada.</li>
+            </ul>
+            <p class="exemplo">Exemplo:<br></p>
+                <code>
+                    <pre>
+&lt;form&gt; &lt;!--Abre o formulário.--&gt; 
+    &lt;textarea rows="5" cols="30"&gt; &lt;!--Cria uma seção de texto editável pelo usuário, com 5 linhas e 30 colunas, de nome teste e id teste_1.--&gt; 
+    &lt;button&gt;&lt;a href="sessentaeseis.github.io&gt;Clique!&gt;&lt;/a&gt;&lt;/button&gt; &lt;!--Botão clicável.--&gt; 
+    &lt;input type="submit" value="submit"&gt; &lt;!--Botão de enviar, ao final.--&gt; 
+&lt;/form&gt; &lt;!--Fechamento da tag form.--&gt;
+                    </pre>
+                </code>
+                <div class="resultado">
+                    <form action="">
+                        <textarea name="teste" id="teste_1" rows="5" cols="30"></textarea>
+                        <button><a href="sessentaeseis.github.io">Clique!</a></button>
+                        <input type="submit" value="submit">
+                    </form>
+                </div>
+        </div>
+    </div>
+    
+    <hr>
+    <footer>&copy; Site desenvolvido por Antonio G. V. Jardim com fins educativos, todos os direitos reservados.</footer>
+</body>
+</html>

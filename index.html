@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index_style.css">
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+    <title>Glossário Web Development</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    <div id="initialdiv">
+        <h1>Glossário Web Development</h1>
+        <p>Bem-vindo ao glossário de Web Development! Aqui, você encontrará definições, dicas e tutoriais relacionados à HTML, CSS e no futuro JS. Este projeto foi desenvolvido tendo como objetivo facilitar o acesso e consulta dos estudantes do ensino técnico do SESI-SENAI às linguagens de Web Development. Sua estrutura é similar a de uma wiki, contendo seções sobre temas específicos para cada página e com explicações sucintas e informativas.<br><br>Você também pode conferir abaixo algumas explicações sobre conceitos fundamentais, junto com o contexto histórico e algumas curiosidades das três linguagens.</p>
+        <button class="index_button"><a href="tags.html" target="_blank">Tags HTML</a></button>
+        <button class="index_button"><a href="props.html" target="_blank">Propriedades CSS</a></button>
+        <button class="index_button" onclick="clique()"><a href="code.html" target="_blank">Comandos JS <img src="imgs/loading.gif" alt=""></a></button>
+        <button class="index_button"><a href="miniprojetos.html" target="_blank">Mini-Projetos</a></button>
+    </div>
+    <div class="index_card_cont">
+        <div class="index_card">
+            <div class="index_card-img">
+                <img src="imgs/html5.png" alt="">
+            </div>
+            <div class="index_card_content">
+                <h3>HTML</h3>
+                <p class="card_p">HTML (HyperText Markup Language) é a linguagem de marcação usada para estruturar páginas da web. Criada no início dos anos 1990 por Tim Berners-Lee, ela permite organizar textos, imagens, links e outros elementos de forma hierárquica, formando a “espinha dorsal” de qualquer site. Sem HTML, o navegador não teria instruções claras sobre o que exibir.</p>
+            </div>
+        </div>
+        <div class="index_card">
+            <div class="index_card-img">
+                <img src="imgs/css.png" alt="">
+            </div>
+            <div class="index_card_content">
+                <h3>CSS</h3>
+                <p class="card_p">CSS (Cascading Style Sheets) é a linguagem responsável pela aparência e estilo das páginas da web. Surgiu em meados dos anos 1990 para separar conteúdo (HTML) da apresentação visual, facilitando a manutenção e garantindo mais flexibilidade no design. Com ele, é possível definir cores, fontes, tamanhos e layouts responsivos.</p>
+            </div>
+        </div>
+        <div class="index_card">
+            <div class="index_card-img">
+                <img src="imgs/javascript.png" alt="">
+            </div>
+            <div class="index_card_content">
+                <h3>JS</h3>
+                <p class="card_p">JavaScript é uma linguagem de programação criada em 1995 que trouxe interatividade às páginas da web. Enquanto o HTML estrutura e o CSS estiliza, o JavaScript permite dinamismo, como formulários que validam dados, menus que se expandem ou conteúdos que mudam sem recarregar a página. É fundamental para criar experiências ricas e responsivas na web moderna.</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <footer>&copy; Site desenvolvido por Antonio G. V. Jardim com fins educativos, todos os direitos reservados.</footer>
+</body>
+</html>

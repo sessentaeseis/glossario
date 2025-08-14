@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+    <title>Propriedades CSS</title>
+    <link rel="stylesheet" href="props.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <nav class="topbar">
+        <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="tags.html">Tags HTML</a></li>
+            <li><a href="props.html" class="selected_tb">Propriedades CSS</a></li>
+            <li onclick="clique()"><a href="#">Comandos JS<img src="imgs/loading.gif" alt=""></a></li>
+            <li><a href="miniprojetos.html">Mini-Projetos</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div id="side_menu">
+            <ol>
+                <li><a href="#cores">Cores e Fundos</a></li>
+                <li><a href="#fontes">Texto e Fontes</a></li>
+                <li><a href="#espacamento">Espaçamento e Tamanho</a></li>
+                <li><a href="#bordas">Bordas e Formas</a></li>
+                <li><a href="#layout">Layout e Posicionamento</a></li>
+            </ol>
+        </div> 
+        <div class="main">
+            <h1>Propriedades CSS</h1><hr>
+            <p>As propriedades CSS são instruções usadas para definir a aparência e o estilo dos elementos em uma página HTML. Cada propriedade controla um aspecto visual específico, como cores, fontes, tamanhos, margens, bordas ou posicionamento. Ao combiná-las, é possível personalizar totalmente o layout, tornando o conteúdo mais organizado, atrativo e adaptado a diferentes dispositivos. Pode ser definido em um arquivo próprio (de formato .css), dentro de uma tag no arquivo .hmtl (como style="") ou na head do arquivo .html (com &lt;style&gt;&lt;/style&gt;). Em geral, é recomendado utilizar a primeira opção, criando um arquivo .css para a estilização. Para facilitar a visualização, os exemplos nessa página seguirão a formatação de tag style.</p>
+            <h2 id="cores">Cores e Fundos</h2><hr class="title_hr">
+            <p>São propriedades que definem a aparência visual básica de um elemento, incluindo cores do texto, fundos sólidos ou com imagens, e efeitos de transparência. São fundamentais para diferenciar visualmente áreas da página e criar contraste. São definidas principalmente em valores hex, rgb ou rgba (outros menos usados incluem hsl, hsla e hwb), e ainda pode ser definido pelo nome da cor (ex: color: royalblue;).</p>
+            <ul>
+                <li><b>color</b> - Define a cor do texto.</li>
+                <li><b>background-color</b> - Define a cor de fundo do elemento trabalhado, podendo variar desde divs, até fundo de textos etc.</li>
+                <li><b>background-image</b> - Define uma imagem de fundo, pode também ser usada para definir um degradê de fundo (com background-image: linear-gradient, conic-gradient ou radial-gradient, por exemplo).</li>
+                <li><b>background-position</b> - Define a posição da imagem, aceitando valores (como %, px, pt...) ou direção (center, left, initial, right...).</li>
+                <li><b>background-size</b> - Define o tamanho da imagem, aceitando valores como px, pt etc.</li>
+                <li><b>background-repeat</b> - Define a repetição (ou a não-repetição) da imagem de fundo. Pode ser definido segundo os seguintes parâmetros: repeat (repete horizontalmente e verticalmente), repeat-x (apenas horizontalmente), repeat-y (apenas verticalmente), no-repeat (não repete), space (repete sem cortar a imagem, e distribui uniformemente), round (força a imagem a preencher todo o espaço, esticando ou achatando se necessário). Além disso, também aceita initial (volta ao valor padrão) e inherit (herda do elemento "pai").</li>
+                <li><b>opacity</b> - Define a transparência, com valor de 0 até 1.</li>
+            </ul>
+            <p class="exemplo">Exemplo (outras partes como DOCTYPE e tag html foram omitidas, para manter sucinto):<br></p>
+                <code>
+                    <pre>
+&lt;head&gt; &lt;!--Abre a tag head.--&gt;
+    &lt;style&gt; &lt;!--Abre a tag style.--&gt;
+        body {
+            background-image: url("imgs/favicon.png");
+            background-repeat: space;
+        }
+        h1 {
+            background-color: rebeccapurple;
+            opacity: 0.6;
+        }
+        p {
+            background-image: linear-gradient (yellow, blue);
+            color: red;
+        }
+    &lt;/style&gt; &lt;!--Fecha a tag style.--&gt; 
+&lt;/head&gt; &lt;!--Fecha a tag head.--&gt; 
+&lt;body&gt; &lt;!--Abre a tag do corpo da página.--&gt; 
+    &lt;h1&gt;Título&lt;/h1&gt; &lt;!--Um título.--&gt; 
+    &lt;p&gt;Lorem ipsum&lt;/p&gt; &lt;!--Um parágrafo.--&gt; 
+&lt;/body&gt; &lt;!--Fecha o corpo da página.--&gt; 
+                    </pre>
+                </code>
+            <div class="resultado">
+                <div id="repeat">
+                    <h1>Título</h1>
+                    <p>Lorem Ipsum</p>
+                </div>
+            </div>
+            <p id="pequenino">que troço feio, meu deus</p>
+
+
+            <h2 id="texto_conteudo">Texto e Fontes</h2><hr class="title_hr">
+            <p>São propriedades para controlar a aparência tipográfica e o alinhamento do texto. É essencial para garantir legibilidade, estilo coerente e hierarquia visual no conteúdo.</p>
+            <ul>
+                <li><b>font-family</b> - Define a fonte utilizada. Pode conter mais de uma fonte ou mesmo uma família (ex: monospace), para servir de reserva caso a primeira fonte selecionada não funcione. Pode ser combinada com a tag link na head do arquivo .html, para usar fontes não-nativas.</li>
+                <li><b>font-size</b> - Define o tamanho do texto. Aceita valores como px, %, pt.</li>
+                <li><b>font-weight</b> - Define a espessura da fonte. Aceita valores como 100, 200 (...), bold, bolder.</li>
+                <li><b>line-height</b> - Controla o espaçamento vertical entre linhas. Aceita valores como px, em, mm.</b></li>
+                <li><b>text-align</b> - Define o alinhamento do texto, podendo alinhar à left (esquerda), right (direita), center (centralizado), justify (justificado) ou simplesmente herdando do elemento "pai" (inherit).</b></li>
+                <li><b>text-decoration</b> - Define a decoração do texto, podendo adicionar ou remover coisas como sublinhado, linha sobreposta etc. Alguns dos principais valores incluem none (nenhuma decoração) e underline (linha abaixo).</li>
+            </ul>
+            <p class="exemplo">Exemplo (outras partes como DOCTYPE e tag html foram omitidas, para manter sucinto):<br>
+            <code>
+                <pre>
+&lt;head&gt; &lt;!--Abre a tag head.--&gt;
+&lt;!--Próximas três linhas importam a fonte Lato, do Google Fonts.--&gt;
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"&gt; 
+    &lt;style&gt; &lt;!--Abre a tag style.--&gt;
+        h1 {
+            font-weight: bolder; &lt;!--Define o texto para estar em negrito.--&gt;
+            text-align: center; &lt;!--Alinha o texto no meio.--&gt;
+            font-family: 'Lato', serif; &lt;!--Define a fonte como Lato, anteriormente importada. Caso ela não esteja disponível, usa uma fonte com serifa como substituta.--&gt;
+            text-decoration: underline; &lt;!--Define um sublinhado para o título.--&gt;
+        }
+        p {
+            font-size: 14px; &lt;!--Define o tamanho da fonte.--&gt;
+            text-align: justify; &lt;!--Justifica o texto, fazendo com que ele termine e comece no mesmo ponto em todas as linhas.--&gt;
+            line-height: 3mm; &lt;!--Define o espaçamento entre linhas para 1mm.--&gt;
+        }
+    &lt;/style&gt; &lt;!--Fecha a tag style.--&gt; 
+&lt;/head&gt; &lt;!--Fecha a tag head.--&gt; 
+&lt;body&gt; &lt;!--Abre a tag do corpo da página.--&gt; 
+    &lt;h1&gt;Título&lt;/h1&gt; &lt;!--Um título.--&gt; 
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus error est fugit vel. Fuga, adipisci quia? Itaque consectetur culpa atque praesentium voluptatibus facere natus quis libero fugiat, inventore fugit numquam.&lt;/p&gt; &lt;!--Um parágrafo.--&gt; 
+&lt;/body&gt; &lt;!--Fecha o corpo da página.--&gt; 
+                </pre>
+            </code>
+            <div id="resultado_fonte">
+                <h1>Título</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus error est fugit vel. Fuga, adipisci quia? Itaque consectetur culpa atque praesentium voluptatibus facere natus quis libero fugiat, inventore fugit numquam.</p>
+            </div>
+
+            <h2 id="espacamento">Espaçamento e Tamanho</h2><hr class="title_hr">
+            <p>Definem dimensões e espaçamentos que influenciam diretamente no layout e organização dos elementos. Um bom uso dessas propriedades garante harmonia e evita sobreposição indesejada.</p>
+            <ul>
+                <li><b>width</b> e <b>height</b> - Define a altura (height) e/ou a largura (width) do elemento. Aceita valores diversos, desde %, px, pt etc. O melhor tipo de valor varia de acordo com cada caso, mas geralmente é recomendado utilizar % ou px.</li>
+                <li><b>max-width</b> e <b>max-height</b> - Define uma altura (height) e/ou uma largura (width) máximas. Valores funcionam da mesma forma que width e height.</li>
+                <li><b>min-width</b> e <b>min-height</b> - O oposto do max-width e max-height, defininindo altura e/ou largura mínima.</li>
+                <li><b>padding</b> - Cria espaço em volta do conteúdo do elemento, dentro dos limites estabelecidos do próprio elemento. Aceita px, pt e demais medidas de tamanho. Pode ser usado com uma só propriedade com padding: [valor top] [valor right] [valor bottom] [valor left] ou dissecado em 4 propriedades diferentes: padding-top, padding-right, padding-bottom e padding-left.</li>
+                <li><b>margin</b> - Cria espaçamento fora do elemento, ao contrário do padding (isto é, fora dos limites do elemento).</li>
+                <li><b>box-sizing</b> - Define como o tamanho total do elemento será calculado (levando em conta padding, border etc). Em geral, navegadores usam com o valor content-box, onde padding e border são somados as medidas de altura e largura, fazendo com que alguns elementos fiquem maior que o planejado. Um valor recomendado é border-box, que faz com que largura e altura também incluam o padding e border, facilitando a estilização.</li>
+            </ul>
+            <code>
+                <pre>
+ul
+    liElemento/li
+    liElemento/li
+    liElemento/li
+/ul
+ol
+    liElemento/li
+    liElemento/li
+    liElemento/li
+/ol
+                </pre>
+            </code>
+            <div class="resultado_ele">
+                <ul>
+                    <li>Elemento</li>
+                    <li>Elemento</li>
+                    <li>Elemento</li>
+                </ul>
+                <ol>
+                    <li>Elemento</li>
+                    <li>Elemento</li>
+                    <li>Elemento</li>
+                </ol>
+            </div>
+
+
+            <h2 id="bordas">Bordas e Formas</h2><hr class="title_hr">
+            <p>Propriedades responsáveis por destacar elementos e criar formas mais interessantes. Bordas e sombras ajudam na separação visual, enquanto cantos arredondados dão suavidade ao design.</p>
+            <ul>
+                <li><b>border</b> - Exibe uma imagem, definida com src="". Pode ser uma imagem da internet, (ex: src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy3RlPLgLl76FheCJH893vAr3DSmA0gXmXiQ&s") ou da própria pasta do site, linkando ao caminho da imagem nos arquivos (ex: src="imagens/bolo.jpg").</li>
+                <li><b>border-radius</b> - x</li>
+                <li><b>box-shadow</b> - x</li>
+                <li><b>outline</b> - x</li>
+            </ul>
+            <code>
+                <pre>
+a href="https://youtube.com" target="_blank"Clique aqui!/abr !--Abre youtube.com em uma nova aba do navegador ao clicar.--
+img src="imagens/bazinga.jpg" !--Mostra a imagem bazinga.jpg.--
+                </pre>
+            </code>
+            <a class="resultado" href="https://youtube.com" target="_blank">Clique aqui!</a><br> 
+            <img class="resultado" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy3RlPLgLl76FheCJH893vAr3DSmA0gXmXiQ&s" alt="">
+
+            <h2 id="layout">Layout e Posicionamento</h2><hr class="title_hr">
+            <p>São propriedades que controlam como e onde os elementos aparecem na tela. É fundamental para criar layouts responsivos e posicionar conteúdo de maneira precisa.</p>
+            <ul>
+                <li><b>display</b> - x</li>
+                <li><b>position</b> - x</li>
+                <li><b>top</b>, <b>right</b>, <b>bottom</b> e <b>left</b> - x</li>
+                <li><b>flex</b> - Ux</li>
+                <li><b>grid-template</b> - x</li>
+                <li><b>z-index</b> - Define a ordem de exibição de um elemento (isto é, se ele fica "no topo" de outro), similar a como camadas do Canva ou Photoshop funcionam. Quanto menor o valor, mais no topo o elemento fica (ex: um elemento com z-index: 1 aparece na frente de um com z-index> 3).</li>
+            </ul>
+            <p class="exemplo">Exemplo:<br>
+            <code><pre>
+header
+    h1Meu Site/h1 !--Um Título--
+header
+nav
+    ul
+        liInício/li
+        liSobre/li
+    /ul
+/nav
+main !--Abertura da tag main--
+    section !--Abertura da tag de seção--
+            h2Notícias/h2 !--Um subtítulo--
+
+        article
+            h3Evento importante/h3
+            pHoje ocorreu um evento significativo./p
+        /article
+    /section !--Fechamento da tag de seção--
+/main !--Fechamento da tag main--
+
+footer !--Abertura da tag de rodapé--
+    p© 2025 Meu Site/p !--Conteúdo do rodapé--
+/footer !--Fechamento da tag de rodapé--
+            </pre></code>
+            <div class="resultado">
+                <header><h1>Meu Site</h1></header>
+                <nav><ul>
+                    <li>Início</li>
+                    <li>Sobre</li>
+                </ul></nav>
+                <main>
+                    <section>
+                        <h2>Notícias</h2>
+                        <article>
+                            <h3>Evento Importante</h3>
+                            <p>Hoje ocorreu um evento significativo.</p>
+                        </article>
+                    </section>
+                </main>
+                <footer> 
+                    <p>© 2025 Meu Site</p>
+                </footer> 
+            </div>
+        </div>
+    </div>
+    <hr>
+    <footer>&copy; Site desenvolvido por Antonio G. V. Jardim com fins educativos, todos os direitos reservados.</footer>
+</body>
+</html>
