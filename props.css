@@ -228,3 +228,15 @@ code {
     line-height: 3mm;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.caixa-pequena {
+    width: 50%; 
+    height: 25%; 
+    min-width: 150px; 
+    min-height: 80px; 
+    max-width: 300px; 
+    max-height: 150px; 
+    background-color: steelblue; 
+    margin: auto; 
+    text-align: center;
+}

@@ -129,54 +129,39 @@
                 <li><b>max-width</b> e <b>max-height</b> - Define uma altura (height) e/ou uma largura (width) máximas. Valores funcionam da mesma forma que width e height.</li>
                 <li><b>min-width</b> e <b>min-height</b> - O oposto do max-width e max-height, defininindo altura e/ou largura mínima.</li>
                 <li><b>padding</b> - Cria espaço em volta do conteúdo do elemento, dentro dos limites estabelecidos do próprio elemento. Aceita px, pt e demais medidas de tamanho. Pode ser usado com uma só propriedade com padding: [valor top] [valor right] [valor bottom] [valor left] ou dissecado em 4 propriedades diferentes: padding-top, padding-right, padding-bottom e padding-left.</li>
-                <li><b>margin</b> - Cria espaçamento fora do elemento, ao contrário do padding (isto é, fora dos limites do elemento).</li>
+                <li><b>margin</b> - Cria espaçamento fora do elemento, ao contrário do padding (isto é, fora dos limites do elemento). Muito utilizado para centralizar elementos, com valor auto.</li>
                 <li><b>box-sizing</b> - Define como o tamanho total do elemento será calculado (levando em conta padding, border etc). Em geral, navegadores usam com o valor content-box, onde padding e border são somados as medidas de altura e largura, fazendo com que alguns elementos fiquem maior que o planejado. Um valor recomendado é border-box, que faz com que largura e altura também incluam o padding e border, facilitando a estilização.</li>
             </ul>
+            <p class="exemplo">Exemplo (outras partes como DOCTYPE e tag html foram omitidas, para manter sucinto):<br>
             <code>
                 <pre>
-ul
-    liElemento/li
-    liElemento/li
-    liElemento/li
-/ul
-ol
-    liElemento/li
-    liElemento/li
-    liElemento/li
-/ol
-                </pre>
-            </code>
-            <div class="resultado_ele">
-                <ul>
-                    <li>Elemento</li>
-                    <li>Elemento</li>
-                    <li>Elemento</li>
-                </ul>
-                <ol>
-                    <li>Elemento</li>
-                    <li>Elemento</li>
-                    <li>Elemento</li>
-                </ol>
+&lt;head&gt; &lt;!--Abre a tag head.--&gt;
+    &lt;style&gt;
+        .caixa-pequena {
+            width: 50%; /* Define a largura em porcentagem, que pode ir ao mínimo de 150px e máximo de 300px. */
+            height: 25%; /* Define a altura em porcentagem, que pode ir ao mínimo de 80px e máximo de 150px. */
+            min-width: 150px; /* Define a largura mínima em px. */
+            min-height: 80px; /* Define a altura mínima em px. */
+            max-width: 300px; /* Define a largura máxima em px. */
+            max-height: 150px; /* Define a altura máxima em px. */
+            background-color: steelblue; /* Define uma cor de fundo. */
+            margin: auto; /* Centraliza a caixa. */
+            text-align: center; /*Alinha o texto no centro.*/
+        }
+    &lt;/style&gt; &lt;!--Fecha a tag style.--&gt;
+&lt;/head&gt; &lt;!--Fecha a tag head.--&gt;
+&lt;body&gt; &lt;!--Abre a tag body.--&gt;
+    &lt;div class="caixa-pequena"&gt; &lt;!--Abre a tag e atribui a classe caixa-pequena.--&gt;
+        &lt;p&gt;Caixa pequena&lt;/p&gt; &lt;!--Um parágrafo.--&gt;
+    &lt;/div&gt; &lt;!--Fecha a div.--&gt;
+&lt;/body&gt; &lt;!--Fecha a tag body.--&gt;
+            </pre>
+        </code>
+        <code><pre>
+            <div class="caixa-pequena">
+                <p>Caixa pequena</p>
             </div>
-
-
-            <h2 id="bordas">Bordas e Formas</h2><hr class="title_hr">
-            <p>Propriedades responsáveis por destacar elementos e criar formas mais interessantes. Bordas e sombras ajudam na separação visual, enquanto cantos arredondados dão suavidade ao design.</p>
-            <ul>
-                <li><b>border</b> - Exibe uma imagem, definida com src="". Pode ser uma imagem da internet, (ex: src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy3RlPLgLl76FheCJH893vAr3DSmA0gXmXiQ&s") ou da própria pasta do site, linkando ao caminho da imagem nos arquivos (ex: src="imagens/bolo.jpg").</li>
-                <li><b>border-radius</b> - x</li>
-                <li><b>box-shadow</b> - x</li>
-                <li><b>outline</b> - x</li>
-            </ul>
-            <code>
-                <pre>
-a href="https://youtube.com" target="_blank"Clique aqui!/abr !--Abre youtube.com em uma nova aba do navegador ao clicar.--
-img src="imagens/bazinga.jpg" !--Mostra a imagem bazinga.jpg.--
-                </pre>
-            </code>
-            <a class="resultado" href="https://youtube.com" target="_blank">Clique aqui!</a><br> 
-            <img class="resultado" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy3RlPLgLl76FheCJH893vAr3DSmA0gXmXiQ&s" alt="">
-
+        </pre></code>
             <h2 id="layout">Layout e Posicionamento</h2><hr class="title_hr">
             <p>São propriedades que controlam como e onde os elementos aparecem na tela. É fundamental para criar layouts responsivos e posicionar conteúdo de maneira precisa.</p>
             <ul>
