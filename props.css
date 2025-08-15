@@ -292,3 +292,16 @@ code {
     right: 20px;               
     z-index: 3;                
 }
+
+.caixa-exemplo {
+    width: 200px; /* Largura da caixa */
+    height: 120px; /* Altura da caixa */
+    background-color: lightblue; /* Cor de fundo */
+
+    border: 3px solid navy; /* Borda azul escura */
+    border-radius: 12px; /* Cantos arredondados */
+
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3); /* Sombra externa */
+
+    outline: 2px dashed orange; /* Contorno laranja tracejado */
+}

@@ -162,6 +162,38 @@
                 <p>Caixa pequena</p>
             </div>
         </pre></code>
+        <h2 id="bordas">Bordas e Formas</h2><hr class="title_hr">
+            <p>São propriedades responsáveis por destacar elementos e criar formas mais interessantes. Bordas e sombras ajudam na separação visual, enquanto cantos arredondados dão suavidade ao design.</p>
+            <ul>
+                <li><b>border</b> - Define a borda ao redor de um elemento, controlando sua espessura, estilo e cor. Pode ser configurada em todos os lados de uma vez (border: 2px solid black;) ou individualmente (border-top, border-right, etc.). O border-radius faz parte dessa propriedade e permite arredondar os cantos, variando de bordas levemente curvas (border-radius: 5px;) até totalmente circulares (border-radius: 50%;).</li>
+                <li><b>box-shadow</b> - Aplica sombra ao elemento, criando profundidade ou efeito de destaque. A sintaxe define deslocamento horizontal e vertical, desfoque, espalhamento e cor (box-shadow: 4px 4px 10px rgba(0,0,0,0.3);). Também pode ser usada para simular bordas internas usando o valor inset.</li>
+                <li><b>outline</b> - Desenha um contorno ao redor do elemento, mas sem ocupar espaço no layout (diferente da borda). É muito usado para indicar foco em campos de formulário (outline: 2px solid blue;). Ao contrário da borda, não pode ser arredondado com border-radius.</li>
+            </ul>
+            <p class="exemplo">Exemplo (outras partes como DOCTYPE e tag html foram omitidas, para manter sucinto):<br>
+            <code><pre>
+&lt;head&gt; &lt;!--Abre a tag head.--&gt;
+    &lt;style&gt;
+        .caixa-exemplo {
+            width: 200px; /* Largura da caixa */
+            height: 120px; /* Altura da caixa */
+            background-color: lightblue; /* Cor de fundo */
+        
+            border: 3px solid navy; /* Borda azul escura */
+            border-radius: 12px; /* Cantos arredondados */
+        
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3); /* Sombra externa */
+        
+            outline: 2px dashed orange; /* Contorno laranja tracejado */
+        }
+    &lt;/style&gt;
+&lt;/head&gt; &lt;!--Fecha a tag head.--&gt;
+&lt;body&gt; &lt;!--Abre a tag body.--&gt;
+    &lt;div class="caixa-exemplo"&gt;&lt;/div&gt;
+&lt;/body&gt; &lt;!--Fecha a tag body.--&gt;
+            </pre></code>
+            <div class="resultado">
+                <div class="caixa-exemplo"></div>
+            </div>
             <h2 id="layout">Layout e Posicionamento</h2><hr class="title_hr">
             <p>São propriedades que controlam como e onde os elementos aparecem na tela. É fundamental para criar layouts responsivos e posicionar conteúdo de maneira precisa.</p>
             <ul>
@@ -170,7 +202,7 @@
                 <li><b>top</b>, <b>right</b>, <b>bottom</b> e <b>left</b> - Especificam a distância de um elemento em relação às bordas do seu container de referência. Só funcionam quando a propriedade position não está em static. São úteis para ajustar deslocamentos exatos no layout.</li>
                 <li><b>z-index</b> - Controla a ordem de empilhamento dos elementos na página. Um valor maior significa que o elemento ficará por cima de elementos com valores menores. Funciona apenas em elementos posicionados (position diferente de static).</li>
             </ul>
-            <p class="exemplo">Exemplo:<br>
+            <p class="exemplo">Exemplo (outras partes como DOCTYPE e tag html foram omitidas, para manter sucinto):<br>
             <code><pre>
 &lt;head&gt; &lt;!--Abre a tag head.--&gt;
     &lt;style&gt;
