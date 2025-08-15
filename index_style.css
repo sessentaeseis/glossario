@@ -17,23 +17,26 @@ h1 {
 
 
 #initialdiv p {
-    margin: -30px auto 75px auto;
+    margin-top: -40px;
     max-width: 75%;
+    text-align: justify;
 }
 
 #initialdiv {
     background-color: #14283c;
     padding: 60px;
+    text-align: left;
+    box-shadow: #0e0e0e 0px 0px 3px 2px;
 }
 
 .index_button {
     border: none;
     background-color: #14283c;
     border-radius: 5px;
-    margin: 0px 10px;
+    margin: 30px 23px 5px 0px;
     height: 30px;
     transition: 0.2s;
-    box-shadow: #82baff 0px 0px 3px 1px;
+    border: 2px solid #c1785f;
 }
 
 .index_button a {

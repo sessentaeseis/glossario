@@ -183,6 +183,7 @@ pre {
     padding: 12px;
     border-radius: 6px;
     transition: 0.3s;
+    box-shadow: #000000 0px 0px 10px 1px;
 }
 
 pre:hover {
