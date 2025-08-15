@@ -8,7 +8,6 @@ body {
     color: #eeeeee;
     box-sizing: border-box;
 }
-
 h1 {
     font-size: 80px;
     font-weight: bolder;
@@ -17,9 +16,10 @@ h1 {
 
 
 #initialdiv p {
-    margin-top: -40px;
+    margin-top: -30px;
     max-width: 75%;
     text-align: justify;
+    line-height: 1.6em;
 }
 
 #initialdiv {
@@ -33,7 +33,7 @@ h1 {
     border: none;
     background-color: #14283c;
     border-radius: 5px;
-    margin: 30px 23px 5px 0px;
+    margin: 20px 23px 5px 0px;
     height: 30px;
     transition: 0.2s;
     border: 2px solid #c1785f;

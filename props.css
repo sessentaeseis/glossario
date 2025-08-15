@@ -306,3 +306,14 @@ code {
 
     outline: 2px dashed orange; /* Contorno laranja tracejado */
 }
+
+.social {
+    height: 50px;
+    transition: 0.3s ease;
+    border-radius: 50%;
+}
+
+.social:hover {
+    box-shadow: #d38f78 0px 0px 3px 2px;
+    transform: scale(1.03);
+}
