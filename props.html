@@ -172,50 +172,64 @@
             </ul>
             <p class="exemplo">Exemplo:<br>
             <code><pre>
-header
-    h1Meu Site/h1 !--Um Título--
-header
-nav
-    ul
-        liInício/li
-        liSobre/li
-    /ul
-/nav
-main !--Abertura da tag main--
-    section !--Abertura da tag de seção--
-            h2Notícias/h2 !--Um subtítulo--
+&lt;head&gt; &lt;!--Abre a tag head.--&gt;
+    &lt;style&gt;
+        /* Contêiner principal usando flexbox */
+        .container {
+            display: flex;            /* Alinha elementos lado a lado */
+            justify-content: space-around;
+            align-items: center;
+            height: 300px;
+            background-color: lightgray;
+            position: relative;       /* Define referência para elementos posicionados absolutos */
+        }
 
-        article
-            h3Evento importante/h3
-            pHoje ocorreu um evento significativo./p
-        /article
-    /section !--Fechamento da tag de seção--
-/main !--Fechamento da tag main--
+        /* Caixa fixa no canto superior esquerdo */
+        .caixa-fixa {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            position: absolute;       /* Posicionada em relação ao .container */
+            top: 10px;                 /* Distância de 10px do topo */
+            left: 10px;                /* Distância de 10px da esquerda */
+            z-index: 2;                /* Fica acima de outros elementos */
+        }
 
-footer !--Abertura da tag de rodapé--
-    p© 2025 Meu Site/p !--Conteúdo do rodapé--
-/footer !--Fechamento da tag de rodapé--
+        /* Caixa central com ordem de empilhamento menor */
+            .caixa-central {
+            width: 120px;
+            height: 120px;
+            background-color: royalblue;
+            position: relative;        /* Posição relativa ao seu espaço no flex */
+            z-index: 1;                 /* Fica atrás da caixa vermelha */
+        }
+
+        /* Caixa fixa no canto inferior direito */
+        .caixa-fixa2 {
+            width: 80px;
+            height: 80px;
+            background-color: seagreen;
+            position: absolute;        /* Posicionada em relação ao .container */
+            bottom: 15px;               /* Distância de 15px da base */
+            right: 20px;                /* Distância de 20px da direita */
+            z-index: 3;                 /* Fica por cima de todas */
+        }
+    &lt;/style&gt;
+&lt;/head&gt; &lt;!--Fecha a tag head.--&gt;
+&lt;body&gt; &lt;!--Abre a tag body.--&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="caixa-fixa"&gt;&lt;/div&gt;
+        &lt;div class="caixa-central"&gt;&lt;/div&gt;
+        &lt;div class="caixa-fixa2"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt; &lt;!--Fecha a tag body.--&gt;
             </pre></code>
             <div class="resultado">
-                <header><h1>Meu Site</h1></header>
-                <nav><ul>
-                    <li>Início</li>
-                    <li>Sobre</li>
-                </ul></nav>
-                <main>
-                    <section>
-                        <h2>Notícias</h2>
-                        <article>
-                            <h3>Evento Importante</h3>
-                            <p>Hoje ocorreu um evento significativo.</p>
-                        </article>
-                    </section>
-                </main>
-                <footer> 
-                    <p>© 2025 Meu Site</p>
-                </footer> 
+                <div class="container">
+                <div class="caixa-fixa"></div>
+                <div class="caixa-central"></div>
+                <div class="caixa-fixa2"></div>
             </div>
-        </div>
     </div>
     <hr>
     <footer>&copy; Site desenvolvido por Antonio G. V. Jardim com fins educativos, todos os direitos reservados.</footer>
