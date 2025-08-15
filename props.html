@@ -165,12 +165,10 @@
             <h2 id="layout">Layout e Posicionamento</h2><hr class="title_hr">
             <p>São propriedades que controlam como e onde os elementos aparecem na tela. É fundamental para criar layouts responsivos e posicionar conteúdo de maneira precisa.</p>
             <ul>
-                <li><b>display</b> - x</li>
-                <li><b>position</b> - x</li>
-                <li><b>top</b>, <b>right</b>, <b>bottom</b> e <b>left</b> - x</li>
-                <li><b>flex</b> - Ux</li>
-                <li><b>grid-template</b> - x</li>
-                <li><b>z-index</b> - Define a ordem de exibição de um elemento (isto é, se ele fica "no topo" de outro), similar a como camadas do Canva ou Photoshop funcionam. Quanto menor o valor, mais no topo o elemento fica (ex: um elemento com z-index: 1 aparece na frente de um com z-index> 3).</li>
+                <li><b>display</b> - Define como um elemento será exibido (e como ele se comporta no fluxo da página). Alguns valores são block (ocupa toda a largura disponível), inline (ocupa apenas o espaço do conteúdo) e modos de layout como flex (usado para arranjar itens em colunas ou linhas de forma responsiva e flexível) e grid (semelhante ao flex, mas usado para um layout bi-dimensional, de colunas e fileiras).</li>
+                <li><b>position</b> - Determina como a posição do elemento na página deve ser calculada. Aceita valores como static (padrão), relative (relativo à sua posição original), absolute (posicionado em relação ao elemento pai posicionado), sticky (baseado na posição do scroll, fica "grudado" na tela) e fixed (fixo na tela, independente do scroll).</li>
+                <li><b>top</b>, <b>right</b>, <b>bottom</b> e <b>left</b> - Especificam a distância de um elemento em relação às bordas do seu container de referência. Só funcionam quando a propriedade position não está em static. São úteis para ajustar deslocamentos exatos no layout.</li>
+                <li><b>z-index</b> - Controla a ordem de empilhamento dos elementos na página. Um valor maior significa que o elemento ficará por cima de elementos com valores menores. Funciona apenas em elementos posicionados (position diferente de static).</li>
             </ul>
             <p class="exemplo">Exemplo:<br>
             <code><pre>

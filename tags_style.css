@@ -9,6 +9,10 @@ body {
     box-sizing: border-box;
 }
 
+h2 {
+    font-size: 38px;
+}
+
 .topbar {
     background: #14283c;
     padding: 9px 0px;

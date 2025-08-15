@@ -9,6 +9,10 @@ body {
     box-sizing: border-box;
 }
 
+h2 {
+    font-size: 38px;
+}
+
 .topbar {
     background: #14283c;
     padding: 9px 0px;
@@ -214,6 +218,13 @@ code {
     border-radius: 6px;
     transition: 0.3s;
     box-shadow: #000000 0px 0px 10px 1px;
+    transition: 0.3s;
+}
+
+#resultado_fonte:hover {
+    box-shadow: #997062 0px 0px 3px 2px;
+    transform: scale(1.03);
+    border-left: 5px solid #14283c;
 }
 
 #resultado_fonte h1 {

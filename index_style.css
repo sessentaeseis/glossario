@@ -10,19 +10,19 @@ body {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 80px;
     font-weight: bolder;
     margin-top: -10px;
 }
 
 #initialdiv p {
-    margin: -20px auto 35px auto;
+    margin: -30px auto 75px auto;
     max-width: 75%;
 }
 
 #initialdiv {
     background-color: #14283c;
-    padding: 20px;
+    padding: 60px;
 }
 
 .index_button {
@@ -58,6 +58,7 @@ h1 {
     display: inline-grid;
     grid-template-columns: auto auto auto;
     justify-content: space-around;
+    padding: 30px;
 }
 
 .index_card {
